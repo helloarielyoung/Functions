@@ -111,7 +111,7 @@ def is_berry(fruit):
 
     """
 
-    pass
+    return fruit in ("blackberry", "strawberry", "raspberry")
 
 
 def shipping_cost(fruit):
@@ -125,7 +125,10 @@ def shipping_cost(fruit):
 
     """
 
-    pass
+    if is_berry(fruit):
+        return 0
+    else:
+        return 5
 
 
 def append_to_list(lst, num):
@@ -137,7 +140,26 @@ def append_to_list(lst, num):
 
     """
 
-    pass
+    new_lst = lst[:]
+    new_lst.append(num)
+
+    return new_lst
+
+#    (d) Write a function calculate_price to calculate an item's total cost by
+#        adding tax, and any fees required by state law.
+
+#        Your function will take as parameters (in this order): the base price of
+#        the item, a two-letter state abbreviation, and the tax percentage (as a
+#        two-digit decimal, so, for instance, 5% will be .05). If the user does not
+#        provide a tax rate it should default to 5%.
+
+#        CA law requires stores to collect a 3% recycling fee, PA requires a $2
+#        highway safety fee, and in MA, there is a Commonwealth Fund fee of $1 for
+#        items with a base price under $100 and $3 for items $100 or more. Fees are
+#        added *after* the tax is calculated.
+
+#        Your function should return the total cost of the item, including tax and
+#        fees.
 
 
 def calculate_price(FILL_ME_IN):
