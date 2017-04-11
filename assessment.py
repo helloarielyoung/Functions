@@ -218,9 +218,21 @@ def calculate_price(price, state, percent_tax=.05):
 ###############################################################################
 
 
-def append_var_arguments_to_list(list, *args):
-    pass
+def append_var_arguments_to_list(list_of_stuff, *args):
+    """Appends any number of arguments to list.
 
+    Accepts a list and any number of additional arguments and appends all
+    the additional arguments to the list and returns entire list.
+
+    >>> append_var_arguments_to_list(['first', 'list'], 'more', 'even more', 'stuff')
+    ['first', 'list', 'more', 'even more', 'stuff']
+
+    """
+
+    for arg in args:
+        list_of_stuff.append(arg)
+
+    return list_of_stuff
 
 # END OF ASSESSMENT: You can ignore everything below.
 
