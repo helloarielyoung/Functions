@@ -64,22 +64,49 @@ PART TWO:
 
 """
 
+
+def hello_world():
+    """Prints "Hello World"
+    """
+
+    print "Hello World"
+
+
+def say_hi(name):
+    pass
+
+
+def print_product(num1, num2):
+    pass
+
+
+def repeat_string(string, num1):
+    pass
+
+def print_sign(num1):
+    pass
+
+
+def is_divisible_by_three(num1):
+    pass
+
+
+def num_spaces(sentence):
+    pass
+
+
+def total_meal_price(meal_price, tip_percentage):
+    pass
+
+def sign_and_parity(num1):
+    pass
+
 ###############################################################################
 
 # PART ONE
 
 # 1. Write a function called 'hello_world' that does not take any arguments and
 #    prints "Hello World".
-
-
-def hello_world():
-    """Prints "Hello World"
-
-        >>> hello_world()
-    Hello World
-    """
-
-    print "Hello World"
 
 # 2. Write a function called 'say_hi' that takes a name as a string and
 #    prints "Hi" followed by the name.
