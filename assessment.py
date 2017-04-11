@@ -145,24 +145,8 @@ def append_to_list(lst, num):
 
     return new_lst
 
-#    (d) Write a function calculate_price to calculate an item's total cost by
-#        adding tax, and any fees required by state law.
 
-#        Your function will take as parameters (in this order): the base price of
-#        the item, a two-letter state abbreviation, and the tax percentage (as a
-#        two-digit decimal, so, for instance, 5% will be .05). If the user does not
-#        provide a tax rate it should default to 5%.
-
-#        CA law requires stores to collect a 3% recycling fee, PA requires a $2
-#        highway safety fee, and in MA, there is a Commonwealth Fund fee of $1 for
-#        items with a base price under $100 and $3 for items $100 or more. Fees are
-#        added *after* the tax is calculated.
-
-#        Your function should return the total cost of the item, including tax and
-#        fees.
-
-
-def calculate_price(FILL_ME_IN):
+def calculate_price(price, state, percent_tax=.05):
     """Calculate total price of an item, figuring in state taxes and fees.
 
     >>> calculate_price(40, "CA")
@@ -185,8 +169,26 @@ def calculate_price(FILL_ME_IN):
 
     """
 
-    pass
+    #save the original price for later
+    original_price = price
 
+    #add Tax
+    price = price + (price * percent_tax)
+
+    if state == 'CA':
+        #fees - CA Recycling fee 3%
+        price = price + (price * .03)
+    elif state == 'PA':
+        #fees - $2 highway safety fee
+        price = price + 2
+    elif state == 'MA':
+        #fees $1 for price < 100, $3 for 100 or more
+        if original_price < 100:
+            price = price + 1.00
+        else:
+            price = price + 3.00
+
+    return price
 
 ###############################################################################
 
@@ -214,6 +216,11 @@ def calculate_price(FILL_ME_IN):
 
 
 ###############################################################################
+
+
+def append_var_arguments_to_list(list, *args):
+    pass
+
 
 # END OF ASSESSMENT: You can ignore everything below.
 
