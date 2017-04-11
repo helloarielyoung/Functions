@@ -234,6 +234,33 @@ def append_var_arguments_to_list(list_of_stuff, *args):
 
     return list_of_stuff
 
+#    (b) Make a new function with a nested inner function.
+#        The outer function will take in a word.
+#        The inner function will multiply that word by 3.
+#        Then, the outer function will call the inner function.
+#        Print the output as a tuple, with the original function argument
+#        at index 0 and the result of the inner function at index 1.
+
+#        Example:
+
+#        >>> outer("Balloonicorn")
+#        ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
+
+
+def manipulate_word(word):
+    """Takes word and puts it in a tuple with itself three times.
+
+    Accepts a word, the outputs it as a tuple with two parts: the original
+    word and the original word duplicated x3 and concatenated together.
+
+    >>> manipulate_word("Balloonicorn")
+    ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
+    """
+
+    pass
+
+
+
 # END OF ASSESSMENT: You can ignore everything below.
 
 if __name__ == "__main__":
