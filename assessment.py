@@ -24,28 +24,28 @@ def concatenate_name(first_name, last_name):
     """Concatenates first and last names
 
     >>> concatenate_name("Joe", "Smith")
-    "Joe Smith"
+    'Joe Smith'
 
     """
-    return first_name, last_name
+    return first_name + " " + last_name
 
 
 def combine_hometown_and_concat_name(town, first_name, last_name):
     """Returns response based on whether we are from same town
 
     >>> combine_hometown_and_concat_name("Ben Lomond", "Joe", "Smith")
-    "Hi, Joe Smith, we're from the same place!"
+    Hi, Joe Smith, we're from the same place!
 
     >>> combine_hometown_and_concat_name("San Francisco", "Joe", "Smith")
-    "Hi, Joe Smith, I'd like to visit San Francisco!"
+    Hi, Joe Smith, I'd like to visit San Francisco!
 
     """
     if is_hometown(town):
         print "Hi, " + concatenate_name(first_name,
-                        last_name) + "we're from the same place!"
+                            last_name) + ", we're from the same place!"
     else:
         print "Hi, " + concatenate_name(first_name,
-                        last_name) + "I'd like to visit " + town
+                            last_name) + ", I'd like to visit " + town + "!"
 
 ###############################################################################
 
