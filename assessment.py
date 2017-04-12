@@ -255,10 +255,15 @@ def manipulate_word(word):
 
     >>> manipulate_word("Balloonicorn")
     ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
+
     """
 
-    pass
+    #word three times
+    word_times_three = word + word + word
 
+    manipulated_tuple = (word, word_times_three)
+
+    return manipulated_tuple
 
 
 # END OF ASSESSMENT: You can ignore everything below.
