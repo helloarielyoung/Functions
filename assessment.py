@@ -265,7 +265,6 @@ def manipulate_word(word):
 
     return manipulated_tuple
 
-
 # END OF ASSESSMENT: You can ignore everything below.
 
 if __name__ == "__main__":
